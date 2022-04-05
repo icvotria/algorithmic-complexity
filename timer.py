@@ -3,20 +3,17 @@ import time
 def bubble_sort(lst):
   length = len(lst)
   for i in range(length):
-  	print(lst[i])
+  	print(lst[i] * 128751235246)
 
 num_list = [34, 2, 76, 0, -1, 200]
 
-def timer():
+def timer(algo, data):
 	before = time.perf_counter()
-	print(f"1: {before}")
-	bubble_sort(num_list)
+	print(before)
+	algo(data)
 	after = time.perf_counter()
+	print(after)
 	total = after - before
-	print(f"2:{after}")
-	print(f"3: {total}")
+	return total
  
-# before = time.perf_counter()			
-timer()
-# after = time.perf_counter()
-# print(after - before)
+print(timer(bubble_sort, num_list))
