@@ -9,7 +9,7 @@ def number_generator(x):
 
 def input_generator():
     values = []
-    for i in range(0, 100001, 5000):
+    for i in range(0, 501, 10):
         values.append(number_generator(i))
     return values
 
