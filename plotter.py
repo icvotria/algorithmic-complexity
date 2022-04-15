@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from bubble_sort import bubble_sort
 from timer import timer
-from shuffle import shuffle
+# from shuffle import shuffle
 
 def number_generator(x):
     numbers = [i for i in range(x)]
@@ -10,7 +10,7 @@ def number_generator(x):
 
 def input_generator():
     values = []
-    for i in range(0, 5001, 50):
+    for i in range(0, 50001, 50):
         values.append(number_generator(i))
     return values
 
@@ -31,7 +31,7 @@ def plotter(x_values, y_values, name):
     plt.show()
 
 inputs = input_generator()
-y = algo_timer(shuffle, inputs)
+y = algo_timer(bubble_sort, inputs)
 x = find_length(inputs)
 
-plotter(x, y, 'shuffle')
+plotter(x, y, 'bubble')

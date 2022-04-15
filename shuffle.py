@@ -17,5 +17,3 @@ def shuffle1(lst):
         new_index = new_index_order[index]
         x = lst[new_index]
         new_lst.append(x)
-
-def shuffle2(lst):      

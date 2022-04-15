@@ -1,8 +1,10 @@
 def bubble_sort(lst):
+    length = len(lst) - 1
+    has_swapped = True
     
-    length = len(lst)
-    for i in range(length):
-        for j in range(length - 1):
-            if lst[j] > lst[j + 1]:
-                lst[j + 1], lst[j] = lst[j], lst[j + 1]
+    while(has_swapped):
+        has_swapped = False
+        for i in range(length):
+            if lst[i] > lst[i + 1]:
+                lst[i + 1], lst[i] = lst[i], lst[i + 1]
     return lst
