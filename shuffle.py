@@ -1,6 +1,6 @@
 import random
 
-def shuffle1(lst):
+def shuffle(lst):
 
     indexes = [i for i in range(len(lst))]
     
