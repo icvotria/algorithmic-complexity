@@ -3,6 +3,7 @@ import random
 from bubble_sort import bubble_sort
 from timer import timer
 from shuffle import shuffle
+from counting_sort import countingSort
 
 def reversed_number_generator(x):
     numbers = [i for i in range(x)]
@@ -16,13 +17,13 @@ def shuffled_number_generator(x):
 
 def shuffled_input_generator():
     values = []
-    for i in range(0, 30001, 50):
+    for i in range(1, 31, 2):
         values.append(shuffled_number_generator(i))
     return values
 
 def input_generator(type):
     values = []
-    for i in range(0, 60001, 50):
+    for i in range(0, 15001, 20):
         values.append(type(i))
     return values
 
@@ -43,7 +44,7 @@ def plotter(x_values, y_values, name):
     plt.show()
 
 def plot_bubble_sort():
-    inputs = input_generator(reversed_number_generator)
+    inputs = input_generator(shuffled_number_generator)
     y = algo_timer(bubble_sort, inputs)
     x = find_length(inputs)
     plotter(x, y, 'bubble')
@@ -54,8 +55,16 @@ def plot_shuffle():
     x = find_length(inputs)
     plotter(x, y, 'shuffle')
     
-def plot_quicksort():
+# def plot_quicksort():
+#     inputs = input_generator(shuffled_number_generator)
+#     y = algo_timer(quick_sort, inputs)
+#     x = find_length(inputs)
+#     plotter(x, y, 'quicksort')
+
+def plot_counting_sort():
     inputs = input_generator(shuffled_number_generator)
-    y = algo_timer(bubble_sort, inputs)
+    y = algo_timer(countingSort, inputs)
     x = find_length(inputs)
-    plotter(x, y, 'quicksort')
+    plotter(x, y, 'counting sort')
+    
+plot_counting_sort()
