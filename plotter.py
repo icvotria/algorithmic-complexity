@@ -23,7 +23,7 @@ def shuffled_input_generator():
 
 def input_generator(type):
     values = []
-    for i in range(0, 15001, 20):
+    for i in range(0, 18001, 20):
         values.append(type(i))
     return values
 

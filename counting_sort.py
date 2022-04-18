@@ -1,5 +1,5 @@
 def countingSort(arr):
-    arr_size = 15001
+    arr_size = 18001
     count_arr = [0]*arr_size
     output = [0] * len(arr)
     
